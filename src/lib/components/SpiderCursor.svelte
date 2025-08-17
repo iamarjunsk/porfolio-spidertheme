@@ -29,13 +29,13 @@
   >
     <!-- Web line -->
     <div 
-      class="absolute w-0.5 bg-gradient-to-b from-white/80 to-white/20 origin-top animate-swing"
+      class="absolute w-0.5 bg-gradient-to-b from-white/80 to-white/20 origin-top"
       style="height: {$mouseY}px"
     ></div>
     <!-- Spider -->
     <div 
-      class="absolute text-2xl animate-dangle"
-      style="top: {$mouseY}px; left: -12px"
+      class="absolute text-2xl animate-dangle text-white"
+      style="top: {$mouseY}px; left: 0px; filter: hue-rotate(0deg) saturate(2) brightness(0.8) sepia(1) contrast(1.5);"
     >
       🕷️
     </div>

@@ -10,7 +10,7 @@
 </script>
 
 <article class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden 
-                border-4 border-spider-red hover:border-spider-blue 
+                border-4 border-spider-blue hover:border-spider-red 
                 transition-all duration-300 hover:-translate-y-2 
                 shadow-xl hover:shadow-2xl">
   
@@ -34,7 +34,7 @@
   
   <!-- Content -->
   <div class="relative p-6">
-    <h3 class="text-2xl font-comic text-spider-red dark:text-spider-blue mb-3">
+    <h3 class="text-2xl font-comic text-spider-blue dark:text-spider-red mb-3">
       {title}
     </h3>
     
@@ -46,8 +46,8 @@
     {#if tags.length > 0}
       <div class="flex flex-wrap gap-2 mb-4">
         {#each tags as tag}
-          <span class="px-3 py-1 bg-spider-red/10 text-spider-red 
-                       rounded-full text-sm font-semibold">
+          <span class="px-3 py-1 bg-spider-blue/10 text-spider-blue 
+                       dark:text-white rounded-full text-sm font-semibold">
             {tag}
           </span>
         {/each}

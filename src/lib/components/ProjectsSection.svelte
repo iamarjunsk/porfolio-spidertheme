@@ -55,8 +55,8 @@
 
 <section id="projects" class="py-20 px-4 bg-white dark:bg-gray-900">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-4xl md:text-5xl font-comic text-center text-spider-red 
-               dark:text-spider-blue mb-12">
+    <h2 class="text-4xl md:text-5xl font-comic text-center text-spider-blue 
+               dark:text-spider-red mb-12">
       Web-Slinging Projects
     </h2>
     

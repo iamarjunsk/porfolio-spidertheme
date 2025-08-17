@@ -9,7 +9,7 @@
   });
 </script>
 
-<header class="relative min-h-screen bg-gradient-to-br from-spider-red to-spider-blue overflow-hidden">
+<header class="relative min-h-screen bg-gradient-to-br from-spider-blue to-spider-red overflow-hidden">
   <!-- Web Pattern Background -->
   <div class="absolute inset-0 bg-web-pattern bg-[length:100px_100px] opacity-20 animate-float"></div>
   
@@ -23,7 +23,7 @@
                        md:drop-shadow-[6px_6px_0_#000080]">
             Arjun S K
           </span>
-          <span class="inline-block">🕸️</span>
+          <span class="inline-block animate-clockTick">🕸️</span>
         </h1>
         
         <p class="text-xl md:text-2xl text-white text-center mt-6 font-comic-neue">
@@ -34,14 +34,14 @@
         <div class="flex gap-4 justify-center mt-8">
           <button 
             on:click={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            class="px-8 py-3 bg-white text-spider-red font-bold rounded-full 
+            class="px-8 py-3 bg-white text-spider-blue font-bold rounded-full 
                    hover:scale-110 transition-transform duration-300 
                    shadow-lg hover:shadow-2xl">
             View Projects
           </button>
           <button 
             on:click={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            class="px-8 py-3 bg-spider-red text-white font-bold rounded-full 
+            class="px-8 py-3 bg-spider-blue text-white font-bold rounded-full 
                    border-2 border-white hover:scale-110 transition-transform 
                    duration-300 shadow-lg hover:shadow-2xl">
             Contact Me

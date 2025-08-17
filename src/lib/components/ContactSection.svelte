@@ -2,7 +2,7 @@
   import { Mail, Phone, Linkedin, Github, MapPin, Coffee } from 'lucide-svelte';
 </script>
 
-<section id="contact" class="py-20 px-4 bg-gradient-to-br from-spider-blue to-spider-red">
+<section id="contact" class="py-20 px-4 bg-gradient-to-br from-spider-red to-spider-blue">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-4xl md:text-5xl font-comic text-center text-white mb-4">
       Signal the Web-Signal

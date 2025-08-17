@@ -17,11 +17,11 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-spider-red rounded-full;
+    @apply bg-spider-blue rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-spider-dark-red;
+    @apply bg-spider-dark-blue;
   }
 }
 
@@ -32,8 +32,8 @@
   
   .text-shadow-comic {
     text-shadow: 
-      3px 3px 0 #CC0000,
-      6px 6px 0 #000080,
+      3px 3px 0 #000080,
+      6px 6px 0 #CC0000,
       9px 9px 20px rgba(0,0,0,0.5);
   }
 }

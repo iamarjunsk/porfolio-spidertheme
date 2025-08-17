@@ -22,6 +22,7 @@ export default {
         'heroText': 'heroText 2s ease-out',
         'webBounce': 'webBounce 0.6s ease',
         'spiderSense': 'spiderSense 0.5s ease infinite',
+        'clockTick': 'clockTick 60s linear infinite',
       },
       keyframes: {
         swing: {
@@ -54,6 +55,10 @@ export default {
         spiderSense: {
           '0%, 100%': { transform: 'scale(1) rotate(0deg)' },
           '50%': { transform: 'scale(1.3) rotate(180deg)' },
+        },
+        clockTick: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
       backgroundImage: {

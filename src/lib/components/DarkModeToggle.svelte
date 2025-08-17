@@ -31,12 +31,12 @@
   class="fixed top-4 right-4 z-50 p-3 bg-white dark:bg-gray-800 
          rounded-full shadow-lg hover:shadow-2xl 
          transition-all duration-300 hover:scale-110 
-         border-2 border-spider-red dark:border-spider-blue"
+         border-2 border-spider-blue dark:border-spider-red"
   aria-label="Toggle dark mode"
 >
   {#if darkMode}
     <Sun class="w-6 h-6 text-yellow-500" />
   {:else}
-    <Moon class="w-6 h-6 text-spider-blue" />
+    <Moon class="w-6 h-6 text-spider-red" />
   {/if}
 </button>
