@@ -6,8 +6,9 @@
 </script>
 
 <svelte:head>
-  <title>Arjun S K | Web Developer Portfolio</title>
-  <meta name="description" content="Arjun S K - Experienced Web Developer specializing in React.js, Vue.js, and modern web technologies" />
+  <title>Arjun S K | Web Developer Portfolio - React, Vue & Modern Web Technologies</title>
+  <meta name="description" content="Arjun S K - Experienced Web Developer specializing in React.js, Vue.js, and modern web technologies. Building amazing web experiences with Spider-Man flair. Your friendly neighborhood developer!" />
+  <meta name="keywords" content="Arjun S K, web developer, react developer, vue developer, javascript, typescript, frontend developer, portfolio, spider-man portfolio" />
 </svelte:head>
 
 <HeroSection />
