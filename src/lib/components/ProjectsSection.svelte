@@ -53,14 +53,22 @@
   ];
 </script>
 
-<section id="projects" class="py-20 px-4 bg-white dark:bg-gray-900">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-4xl md:text-5xl font-comic text-center text-spider-blue 
-               dark:text-spider-red mb-12">
-      Web-Slinging Projects
-    </h2>
+<section id="projects" class="relative py-20 px-4 bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-deep-space overflow-hidden">
+  <!-- Background Elements -->
+  <div class="absolute top-20 right-10 w-36 h-36 bg-spider-red/10 rounded-full blur-3xl animate-pulse"></div>
+  <div class="absolute bottom-20 left-10 w-44 h-44 bg-spider-blue/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+  
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-16">
+      <div class="inline-block p-4 bg-white/10 backdrop-blur-sm rounded-full mb-4">
+        <span class="text-6xl">💻</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-comic bg-gradient-to-r from-spider-red via-spider-blue to-spider-red bg-clip-text text-transparent">
+        Web-Slinging Projects
+      </h2>
+    </div>
     
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {#each projects as project}
         <ProjectCard {...project} />
       {/each}

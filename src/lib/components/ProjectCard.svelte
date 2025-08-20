@@ -1,18 +1,18 @@
-<script>
+<script lang="ts">
   export let title = '';
   export let description = '';
   export let image = '';
   export let liveUrl = '';
   export let githubUrl = '';
-  export let tags = [];
+  export let tags: string[] = [];
   
   import { ExternalLink, Github } from 'lucide-svelte';
 </script>
 
-<article class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden 
-                border-4 border-spider-blue hover:border-spider-red 
-                transition-all duration-300 hover:-translate-y-2 
-                shadow-xl hover:shadow-2xl">
+<article class="group relative bg-white/20 dark:bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden 
+                border border-white/20 hover:border-spider-red/50
+                transition-all duration-500 hover:-translate-y-2 hover:rotate-1
+                shadow-xl hover:shadow-2xl hover:shadow-spider-red/25">
   
   <!-- Web Pattern Overlay -->
   <div class="absolute -top-1/2 -right-1/2 w-full h-full 
@@ -34,11 +34,11 @@
   
   <!-- Content -->
   <div class="relative p-6">
-    <h3 class="text-2xl font-comic text-spider-blue dark:text-spider-red mb-3">
+    <h3 class="text-2xl font-comic bg-gradient-to-r from-spider-red to-spider-blue bg-clip-text text-transparent mb-3">
       {title}
     </h3>
     
-    <p class="text-gray-600 dark:text-gray-300 mb-4">
+    <p class="text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
       {description}
     </p>
     
@@ -46,8 +46,10 @@
     {#if tags.length > 0}
       <div class="flex flex-wrap gap-2 mb-4">
         {#each tags as tag}
-          <span class="px-3 py-1 bg-spider-blue/10 text-spider-blue 
-                       dark:text-white rounded-full text-sm font-semibold">
+          <span class="px-3 py-1 bg-gradient-to-r from-spider-red/10 to-spider-blue/10 
+                       text-spider-red dark:text-white rounded-full text-sm font-semibold
+                       border border-spider-red/20 hover:border-spider-red/40
+                       transition-colors duration-300">
             {tag}
           </span>
         {/each}

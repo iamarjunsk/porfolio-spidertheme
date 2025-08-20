@@ -25,17 +25,23 @@
 {#if mounted}
   <div 
     class="pointer-events-none fixed top-0 left-0 z-[9999] mix-blend-difference"
-    style="transform: translate({$mouseX}px, 0)"
+    style="transform: translate({$mouseX - 12}px, 0)"
   >
     <!-- Web line -->
     <div 
-      class="absolute w-0.5 bg-gradient-to-b from-white/80 to-white/20 origin-top"
-      style="height: {$mouseY}px"
+      class="absolute w-0.5 bg-gradient-to-b from-spider-red/80 via-white/60 to-spider-red/20 origin-top shadow-lg"
+      style="height: {$mouseY + 24}px; left: 12px"
+    ></div>
+    <!-- Glow effect -->
+    <div 
+      class="absolute w-1 bg-gradient-to-b from-spider-red/40 to-transparent origin-top blur-sm"
+      style="height: {$mouseY + 24}px; left: 11.875px"
     ></div>
     <!-- Spider -->
     <div 
-      class="absolute text-2xl animate-dangle text-white"
-      style="top: {$mouseY}px; left: 0px; filter: hue-rotate(0deg) saturate(2) brightness(0.8) sepia(1) contrast(1.5);"
+      class="absolute text-2xl animate-dangle drop-shadow-lg"
+      style="top: {$mouseY}px; left: 12px; 
+             filter: hue-rotate(0deg) saturate(1.5) brightness(1.2) drop-shadow(0 0 8px rgba(255,0,0,0.6));"
     >
       🕷️
     </div>

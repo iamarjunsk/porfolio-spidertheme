@@ -16,11 +16,15 @@
 <ContactSection />
 
 <!-- Footer -->
-<footer class="py-8 bg-gray-900 text-white text-center">
-  <p class="text-lg font-comic-neue">
-    Made with 🕷️ and ❤️ by Arjun S K
-  </p>
-  <p class="mt-2 opacity-75">
-    © 2025 - With great code comes great responsibility
-  </p>
+<footer class="py-12 bg-gradient-to-r from-deep-space via-gray-900 to-deep-space text-white text-center relative overflow-hidden">
+  <div class="absolute inset-0 bg-web-pattern bg-[length:60px_60px] opacity-5"></div>
+  <div class="relative z-10">
+    <p class="text-lg font-comic-neue mb-2">
+      Made with <span class="text-spider-red animate-pulse">🕷️</span> and <span class="text-red-400">❤️</span> by 
+      <span class="bg-gradient-to-r from-spider-red to-spider-blue bg-clip-text text-transparent font-bold">Arjun S K</span>
+    </p>
+    <p class="text-white/60 text-sm">
+      © 2025 - With great code comes great responsibility
+    </p>
+  </div>
 </footer>
