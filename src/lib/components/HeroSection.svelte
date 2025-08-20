@@ -41,7 +41,7 @@
             <!-- Header -->
             <div class="mb-6 lg:mb-8">
               <div class="flex flex-col items-center lg:flex-row lg:items-center gap-4 mb-4 lg:mb-6">
-                <img src="/src/lib/assets/spider-logo.png" alt="Spider Logo" 
+                <img src="/spider-logo.png" alt="Spider Logo" 
                      class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 drop-shadow-2xl" />
                 <div>
                   <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-comic text-white leading-tight">
