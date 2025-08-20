@@ -18,7 +18,7 @@
     {#if visible}
       <div in:scale={{ duration: 2000, start: 0, opacity: 0 }}>
         <h1 class="text-6xl md:text-8xl font-comic text-white text-center animate-heroText">
-          <span class="inline-block">🕷️</span>
+          <img src="/src/lib/assets/spider-logo.png" alt="Spider Logo" class="inline-block w-16 h-16 md:w-24 md:h-24" />
           <span class="inline-block drop-shadow-[3px_3px_0_#CC0000] 
                        md:drop-shadow-[6px_6px_0_#000080]">
             Arjun S K

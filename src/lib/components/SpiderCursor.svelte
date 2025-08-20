@@ -9,7 +9,7 @@
   onMount(() => {
     mounted = true;
     
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (/** @type {{ clientX: number; clientY: number; }} */ e) => {
       $mouseX = e.clientX;
       $mouseY = e.clientY;
     };
