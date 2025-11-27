@@ -3,9 +3,44 @@
     import { fade, scale } from "svelte/transition";
 
     let visible = false;
+    let experienceText = "";
+    let shortExperienceText = "";
+
+    function calculateExperience() {
+        const startDate = new Date("2022-01-25");
+        const now = new Date();
+
+        let years = now.getFullYear() - startDate.getFullYear();
+        let months = now.getMonth() - startDate.getMonth();
+        let days = now.getDate() - startDate.getDate();
+
+        if (days < 0) {
+            months--;
+            // Get days in previous month
+            const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+            days += prevMonth.getDate();
+        }
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        const yStr = years > 0 ? `${years} Year${years > 1 ? "s" : ""}` : "";
+        const mStr =
+            months > 0 ? `${months} Month${months > 1 ? "s" : ""}` : "";
+        const dStr = days > 0 ? `${days} Day${days > 1 ? "s" : ""}` : "";
+
+        experienceText = [yStr, mStr, dStr].filter(Boolean).join(" ");
+        shortExperienceText = `${years}+ Years`;
+    }
 
     onMount(() => {
         visible = true;
+        calculateExperience();
+        // Update every day (optional, but good for long running tabs)
+        const interval = setInterval(calculateExperience, 86400000);
+        return () => clearInterval(interval);
     });
 </script>
 
@@ -114,7 +149,7 @@
                             >
                                 Innovative developer with <span
                                     class="text-spider-red font-bold"
-                                    >4+ years</span
+                                    >{shortExperienceText}</span
                                 >
                                 of experience. Expert in
                                 <span class="text-white font-semibold"
@@ -236,14 +271,14 @@
                                 class="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-spider-red/50 transition-colors"
                             >
                                 <div
-                                    class="text-3xl lg:text-4xl font-comic text-spider-red mb-1 lg:mb-2"
+                                    class="text-xl lg:text-2xl font-comic text-spider-red mb-1 lg:mb-2 leading-tight"
                                 >
-                                    4+
+                                    {experienceText}
                                 </div>
                                 <div
                                     class="text-xs lg:text-sm text-gray-400 uppercase tracking-wider"
                                 >
-                                    Years Exp
+                                    Experience
                                 </div>
                             </div>
                             <div
