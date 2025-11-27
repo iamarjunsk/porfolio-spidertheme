@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply bg-[#050505] text-white;
   }
   
   /* Modern Custom Scrollbar */
@@ -13,64 +14,64 @@
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-slate-800/50 rounded-full;
+    @apply bg-slate-900 rounded-full;
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-gradient-to-b from-red-500 to-blue-500 rounded-full;
+    @apply bg-gradient-to-b from-spider-red to-spider-blue rounded-full;
     border: 2px solid transparent;
     background-clip: padding-box;
   }
   
   ::-webkit-scrollbar-thumb:hover {
     @apply from-red-600 to-blue-600;
-    transform: scaleY(1.1);
-    transition: all 0.2s ease;
-  }
-  
-  ::-webkit-scrollbar-corner {
-    @apply bg-slate-800/50;
   }
 }
 
 @layer utilities {
-  .border-3 {
-    border-width: 3px;
-  }
-  
   .text-shadow-comic {
     text-shadow: 
       3px 3px 0 #000080,
       6px 6px 0 #CC0000,
       9px 9px 20px rgba(0,0,0,0.5);
   }
-  
-  /* Scroll reveal animation */
-  .reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-out;
-  }
-  
-  .reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Improved focus states for accessibility */
-  .focus-ring {
-    @apply focus:outline-none focus:ring-4 focus:ring-electric-blue/50 focus:ring-offset-2;
-  }
-  
-  /* Custom gradient text */
-  .gradient-text {
-    @apply bg-gradient-to-r from-electric-blue via-cosmic-purple to-plasma-pink bg-clip-text text-transparent;
+
+  .text-shadow-neon {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(239, 68, 68, 0.5),
+      0 0 30px rgba(239, 68, 68, 0.3);
   }
   
   /* Glass morphism utility */
   .glass {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  /* Spider-Verse Glitch Animation */
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  .animate-glitch {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
   }
 }

@@ -1,77 +1,108 @@
 <script>
-  import ProjectCard from './ProjectCard.svelte';
-  
-  const projects = [
-    {
-      title: 'Visitor Management System (VMS)',
-      description: 'Enterprise facility management platform with multi-tenant architecture. Features OTP authentication, real-time visitor tracking, digital pass system, and comprehensive CRUD operations for facilities, companies, and meeting rooms with hierarchical data management.',
-      image: '',
-      liveUrl: '#',
-      githubUrl: '#',
-      tags: ['React.js', 'Multi-tenant SaaS', 'State Management', 'REST APIs', 'Enterprise App']
-    },
-    {
-      title: 'Apex 3D Advertisement',
-      description: 'An immersive 3D advertisement website built with Vue.js, Tailwind CSS and Three.js. Features admin panel for managing sponsors and 3D content with Pinia state management.',
-      image: '',
-      liveUrl: '#',
-      githubUrl: '#',
-      tags: ['Vue.js', 'Three.js', 'Tailwind CSS', 'Pinia', 'Axios']
-    },
-    {
-      title: 'MyGenie Admin Panel',
-      description: 'Feature-rich admin panel crafted with Next.js and Tailwind CSS. Includes data visualization with Chart.js, API integrations, and responsive design.',
-      image: '',
-      liveUrl: '#',
-      githubUrl: '#',
-      tags: ['Next.js', 'Tailwind CSS', 'Chart.js', 'Axios']
-    },
-    {
-      title: 'Jio Events Platform',
-      description: 'Event management web application with React.js featuring dynamic image rendering, facial detection, and specialized pages for event creators and clients.',
-      image: '',
-      liveUrl: '#',
-      githubUrl: '#',
-      tags: ['React.js', 'Bootstrap', 'SASS/SCSS', 'Facial Detection']
-    },
-    {
-      title: 'Indomie Fan Club Admin',
-      description: 'Admin interface built with React.js and Material UI featuring drag-and-drop functionality, user-based routes, and seamless backend integration.',
-      image: '',
-      liveUrl: '#',
-      githubUrl: '#',
-      tags: ['React.js', 'Material UI', 'SoftUI', 'SASS/SCSS']
-    },
-    {
-      title: 'NeoVision OTT Platform',
-      description: 'Video streaming platform with advanced features including scene detection, custom video player with frame-by-frame navigation, and bookmark functionality.',
-      image: '',
-      liveUrl: '#',
-      githubUrl: '#',
-      tags: ['Vanilla JavaScript', 'Tailwind CSS', 'Video Processing']
-    }
-  ];
+    import ProjectCard from "./ProjectCard.svelte";
+
+    const projects = [
+        {
+            title: "Luxora Shop",
+            description:
+                "A modern e-commerce application focusing on seamless user experience. Features a premium UI, cart management, and smooth checkout flow.",
+            image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop",
+            liveUrl: "https://luxora-shop.vercel.app",
+            githubUrl: "#",
+            tags: ["Nuxt.js", "Pinia", "Tailwind CSS", "Razorpay"],
+        },
+        {
+            title: "KBN Board",
+            description:
+                "A collaborative Kanban project management tool similar to Trello/Jira. Supports drag-and-drop tasks, column management, and real-time updates.",
+            image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1000&auto=format&fit=crop",
+            liveUrl: "https://kbn-board.netlify.app",
+            githubUrl: "#",
+            tags: ["Vue.js", "Pinia", "Drag & Drop", "Netlify"],
+        },
+        {
+            title: "Notepad App",
+            description:
+                "A lightweight, functional note-taking application with local storage support, markdown preview, and organization features.",
+            image: "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1000&auto=format&fit=crop",
+            liveUrl: "https://notepad-a6f81.web.app",
+            githubUrl: "#",
+            tags: ["React.js", "Firebase", "PWA", "CSS3"],
+        },
+        {
+            title: "Apex 3D Advertisement",
+            description:
+                "An immersive 3D advertisement website built with Vue.js and Three.js. Features admin panel for managing sponsors and 3D content.",
+            image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1000&auto=format&fit=crop",
+            liveUrl: "#",
+            githubUrl: "#",
+            tags: ["Vue.js", "Three.js", "Tailwind CSS", "Pinia"],
+        },
+        {
+            title: "Spatium Admin Panel",
+            description:
+                "Scalable Single Page Application (SPA) for facility management. Features resilient API infrastructure and high-performance QR scanner.",
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+            liveUrl: "#",
+            githubUrl: "#",
+            tags: ["React.js", "Redux Toolkit", "Axios", "Vite"],
+        },
+        {
+            title: "NeoVision OTT",
+            description:
+                "Video streaming platform with frame-by-frame rendering and scene detection. Custom video player implementation.",
+            image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=1000&auto=format&fit=crop",
+            liveUrl: "#",
+            githubUrl: "#",
+            tags: ["Vanilla JS", "Video API", "Tailwind", "Performance"],
+        },
+    ];
 </script>
 
-<section id="projects" class="relative py-20 px-4 bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-deep-space overflow-hidden">
-  <!-- Background Elements -->
-  <div class="absolute top-20 right-10 w-36 h-36 bg-spider-red/10 rounded-full blur-3xl animate-pulse"></div>
-  <div class="absolute bottom-20 left-10 w-44 h-44 bg-spider-blue/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-  
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="text-center mb-16">
-      <div class="inline-block p-4 bg-white/10 backdrop-blur-sm rounded-full mb-4">
-        <span class="text-6xl">💻</span>
-      </div>
-      <h2 class="text-4xl md:text-5xl font-comic bg-gradient-to-r from-spider-red via-spider-blue to-spider-red bg-clip-text text-transparent">
-        Web-Slinging Projects
-      </h2>
+<section id="projects" class="relative py-24 px-4 bg-[#0a0a0a] overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div
+            class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-spider-red/50 to-transparent"
+        ></div>
+        <div
+            class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-spider-blue/50 to-transparent"
+        ></div>
+        <div
+            class="absolute top-20 right-10 w-96 h-96 bg-spider-red/5 rounded-full blur-[120px] animate-pulse"
+        ></div>
+        <div
+            class="absolute bottom-20 left-10 w-96 h-96 bg-spider-blue/5 rounded-full blur-[120px] animate-pulse delay-500"
+        ></div>
     </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-      {#each projects as project}
-        <ProjectCard {...project} />
-      {/each}
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-20">
+            <div
+                class="inline-block p-4 bg-white/5 backdrop-blur-sm rounded-full mb-6 border border-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)]"
+            >
+                <span class="text-5xl">💻</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-comic text-white mb-6">
+                Web-Slinging Projects
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                A collection of applications built with modern technologies and
+                a touch of creativity.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {#each projects as project}
+                <div class="group relative h-full">
+                    <!-- Card Glow -->
+                    <div
+                        class="absolute -inset-0.5 bg-gradient-to-r from-spider-red to-spider-blue rounded-2xl opacity-0 group-hover:opacity-30 blur transition duration-500"
+                    ></div>
+
+                    <ProjectCard {...project} />
+                </div>
+            {/each}
+        </div>
     </div>
-  </div>
 </section>
