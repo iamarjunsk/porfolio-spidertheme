@@ -170,6 +170,21 @@
                                     📨 Get In Touch
                                 </span>
                             </button>
+
+                            <a
+                                href="/Arjun S K Resume.pdf"
+                                download="Arjun_SK_Resume.pdf"
+                                class="group relative px-8 py-4 bg-transparent overflow-hidden rounded-lg border border-purple-500/50 hover:border-purple-500 animate-bounce-slow"
+                            >
+                                <div
+                                    class="absolute inset-0 w-full h-full bg-purple-500/10 group-hover:bg-purple-500/20 transition-all duration-300"
+                                ></div>
+                                <span
+                                    class="relative flex items-center justify-center gap-2 text-purple-400 font-bold text-lg group-hover:text-white transition-colors"
+                                >
+                                    📄 Resume
+                                </span>
+                            </a>
                         </div>
 
                         <!-- Quick Links -->
