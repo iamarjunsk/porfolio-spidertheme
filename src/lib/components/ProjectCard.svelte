@@ -7,12 +7,13 @@
     export let tags: string[] = [];
 
     import { ExternalLink, Github } from "lucide-svelte";
+    import tilt from "$lib/actions/tilt";
 </script>
 
 <article
+    use:tilt={{ max: 10, scale: 1.02, glare: true, "max-glare": 0.3 }}
     class="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden
                 border border-white/10 hover:border-spider-red/30 hover:bg-white/10
-                transition-all duration-500 hover:-translate-y-1
                 shadow-lg hover:shadow-xl hover:shadow-spider-red/10
                 h-full flex flex-col"
 >
@@ -20,7 +21,7 @@
     <div
         class="absolute -top-1/2 -right-1/2 w-full h-full
               bg-web-pattern bg-[length:50px_50px] opacity-5
-              group-hover:opacity-10 transition-opacity duration-300"
+              group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"
     ></div>
 
     <!-- Image -->
@@ -39,20 +40,22 @@
     {/if}
 
     <!-- Content -->
-    <div class="relative p-6 flex flex-col flex-1">
+    <div class="relative p-6 flex flex-col flex-1 transform-style-3d">
         <h3
-            class="text-2xl font-comic bg-gradient-to-r from-spider-red to-spider-blue bg-clip-text text-transparent mb-3"
+            class="text-2xl font-comic bg-gradient-to-r from-spider-red to-spider-blue bg-clip-text text-transparent mb-3 translate-z-10"
         >
             {title}
         </h3>
 
-        <p class="text-gray-700 dark:text-gray-200 mb-4 leading-relaxed flex-1">
+        <p
+            class="text-gray-700 dark:text-gray-200 mb-4 leading-relaxed flex-1 translate-z-5"
+        >
             {description}
         </p>
 
         <!-- Tags -->
         {#if tags.length > 0}
-            <div class="flex flex-wrap gap-2 mb-6">
+            <div class="flex flex-wrap gap-2 mb-6 translate-z-5">
                 {#each tags as tag}
                     <span
                         class="px-3 py-1 bg-gradient-to-r from-spider-red/10 to-spider-blue/10
@@ -66,9 +69,8 @@
             </div>
         {/if}
 
-        <!-- Action Buttons - Hidden as requested -->
         <!-- Action Buttons -->
-        <div class="flex gap-3 mt-auto">
+        <div class="flex gap-3 mt-auto translate-z-10">
             {#if liveUrl && liveUrl !== "#"}
                 <a
                     href={liveUrl}
@@ -101,3 +103,15 @@
         </div>
     </div>
 </article>
+
+<style>
+    .transform-style-3d {
+        transform-style: preserve-3d;
+    }
+    .translate-z-5 {
+        transform: translateZ(20px);
+    }
+    .translate-z-10 {
+        transform: translateZ(40px);
+    }
+</style>

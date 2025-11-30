@@ -67,18 +67,7 @@
         </div>
     </div>
 
-    <!-- Floating Elements (Kept as 2D accents for now) -->
-    <div
-        class="absolute top-20 left-20 w-2 h-2 bg-spider-red rounded-full animate-pulse shadow-[0_0_10px_#ff0000] z-0"
-    ></div>
-    <div
-        class="absolute top-40 right-32 w-1 h-1 bg-spider-blue rounded-full animate-pulse shadow-[0_0_10px_#0000ff] z-0"
-        style="animation-delay: 1s;"
-    ></div>
-    <div
-        class="absolute bottom-20 right-20 w-1 h-1 bg-purple-500 rounded-full animate-pulse shadow-[0_0_10px_#a855f7] z-0"
-        style="animation-delay: 0.5s;"
-    ></div>
+    <!-- Floating Elements (Replaced by 3D shapes) -->
 
     <!-- Geometric Web Corner -->
     <div

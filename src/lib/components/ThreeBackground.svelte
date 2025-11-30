@@ -9,6 +9,7 @@
     let animationId: number;
     let particlesMesh: THREE.Points;
     let particlesGeometry: THREE.BufferGeometry;
+    let floatingShapes: THREE.Mesh[] = [];
     let mouseX = 0;
     let mouseY = 0;
     let targetX = 0;
@@ -62,7 +63,11 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
         container.appendChild(renderer.domElement);
 
-        // Particles
+        createParticles();
+        createFloatingShapes();
+    }
+
+    function createParticles() {
         particlesGeometry = new THREE.BufferGeometry();
         const particleCount = 2000;
 
@@ -107,6 +112,45 @@
         scene.add(particlesMesh);
     }
 
+    function createFloatingShapes() {
+        const geometries = [
+            new THREE.IcosahedronGeometry(30, 0),
+            new THREE.TetrahedronGeometry(30, 0),
+            new THREE.OctahedronGeometry(30, 0),
+        ];
+
+        const materials = [
+            new THREE.MeshBasicMaterial({ color: 0xef4444, wireframe: true }), // Red
+            new THREE.MeshBasicMaterial({ color: 0x3b82f6, wireframe: true }), // Blue
+            new THREE.MeshBasicMaterial({ color: 0xa855f7, wireframe: true }), // Purple
+        ];
+
+        // Create a few shapes scattered around
+        for (let i = 0; i < 6; i++) {
+            const geometry =
+                geometries[Math.floor(Math.random() * geometries.length)];
+            const material =
+                materials[Math.floor(Math.random() * materials.length)];
+            const mesh = new THREE.Mesh(geometry, material);
+
+            // Random position spread out
+            mesh.position.x = (Math.random() - 0.5) * 1500;
+            mesh.position.y = (Math.random() - 0.5) * 1000;
+            mesh.position.z = (Math.random() - 0.5) * 800;
+
+            // Random rotation
+            mesh.rotation.x = Math.random() * Math.PI;
+            mesh.rotation.y = Math.random() * Math.PI;
+
+            // Scale variation
+            const scale = 0.5 + Math.random();
+            mesh.scale.set(scale, scale, scale);
+
+            scene.add(mesh);
+            floatingShapes.push(mesh);
+        }
+    }
+
     function onWindowResize() {
         if (!camera || !renderer) return;
 
@@ -148,6 +192,14 @@
         const time = Date.now() * 0.0005;
         particlesMesh.scale.x = 1 + Math.sin(time) * 0.05;
         particlesMesh.scale.y = 1 + Math.sin(time) * 0.05;
+
+        // Animate floating shapes
+        floatingShapes.forEach((mesh, i) => {
+            mesh.rotation.x += 0.005;
+            mesh.rotation.y += 0.01;
+            // Gentle floating movement
+            mesh.position.y += Math.sin(time + i) * 0.5;
+        });
 
         renderer.render(scene, camera);
     }
