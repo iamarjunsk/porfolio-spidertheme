@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { fade, scale } from "svelte/transition";
+    import ThreeBackground from "./ThreeBackground.svelte";
 
     let visible = false;
     let experienceText = "";
@@ -45,21 +46,18 @@
 </script>
 
 <header class="relative min-h-screen bg-[#0a0a0a] overflow-hidden">
-    <!-- Spider-Verse Glitch Background -->
-    <div class="absolute inset-0">
-        <!-- Grid pattern -->
-        <div
-            class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"
-        ></div>
-        <!-- Radial gradient overlay -->
+    <!-- Three.js Background -->
+    <ThreeBackground />
+
+    <!-- Spider-Verse Glitch Background Overlays -->
+    <div class="absolute inset-0 pointer-events-none z-0">
+        <!-- Radial gradient overlay for depth -->
         <div
             class="absolute inset-0 bg-gradient-radial from-spider-red/5 via-transparent to-spider-blue/5"
         ></div>
 
         <!-- Glitch Lines -->
-        <div
-            class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none"
-        >
+        <div class="absolute top-0 left-0 w-full h-full opacity-20">
             <div
                 class="absolute top-1/4 left-0 w-full h-[1px] bg-spider-red animate-pulse"
             ></div>
@@ -69,21 +67,23 @@
         </div>
     </div>
 
-    <!-- Floating Elements -->
+    <!-- Floating Elements (Kept as 2D accents for now) -->
     <div
-        class="absolute top-20 left-20 w-2 h-2 bg-spider-red rounded-full animate-pulse shadow-[0_0_10px_#ff0000]"
+        class="absolute top-20 left-20 w-2 h-2 bg-spider-red rounded-full animate-pulse shadow-[0_0_10px_#ff0000] z-0"
     ></div>
     <div
-        class="absolute top-40 right-32 w-1 h-1 bg-spider-blue rounded-full animate-pulse shadow-[0_0_10px_#0000ff]"
+        class="absolute top-40 right-32 w-1 h-1 bg-spider-blue rounded-full animate-pulse shadow-[0_0_10px_#0000ff] z-0"
         style="animation-delay: 1s;"
     ></div>
     <div
-        class="absolute bottom-20 right-20 w-1 h-1 bg-purple-500 rounded-full animate-pulse shadow-[0_0_10px_#a855f7]"
+        class="absolute bottom-20 right-20 w-1 h-1 bg-purple-500 rounded-full animate-pulse shadow-[0_0_10px_#a855f7] z-0"
         style="animation-delay: 0.5s;"
     ></div>
 
     <!-- Geometric Web Corner -->
-    <div class="absolute top-0 right-0 w-64 h-64 opacity-10">
+    <div
+        class="absolute top-0 right-0 w-64 h-64 opacity-10 pointer-events-none z-0"
+    >
         <svg viewBox="0 0 200 200" class="w-full h-full">
             <path
                 d="M200,0 L0,200 M180,0 L0,180 M160,0 L0,160 M140,0 L0,140 M120,0 L0,120 M100,0 L0,100 M80,0 L0,80 M60,0 L0,60 M40,0 L0,40 M20,0 L0,20"
