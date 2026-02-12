@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { fly, fade } from "svelte/transition";
     import SkillWeb from "./SkillWeb.svelte";
+    import ParallaxLayer from "./ParallaxLayer.svelte";
 
     let skillCategories = [
         {
@@ -104,120 +105,123 @@
         <!-- Content Grid -->
         <div class="grid lg:grid-cols-2 gap-16 items-start">
             <!-- Bio -->
-            <div class="space-y-8">
-                <div
-                    class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-lg relative group overflow-hidden"
-                >
+            <ParallaxLayer speed={0.3}>
+                <div class="space-y-8">
                     <div
-                        class="absolute top-0 left-0 w-1 h-full bg-spider-red"
-                    ></div>
-                    <p class="text-lg leading-relaxed text-gray-300">
-                        Innovative and high-performance <span
-                            class="text-white font-bold">Web Developer</span
-                        >
-                        with over
-                        <span class="text-spider-red font-bold">4 years</span>
-                        of experience building dynamic web applications. Expert
-                        in modern JavaScript frameworks including
-                        <span class="text-spider-blue font-semibold"
-                            >React.js</span
-                        >,
-                        <span class="text-green-400 font-semibold">Vue.js</span
-                        >,
-                        <span class="text-green-500 font-semibold">Nuxt.js</span
-                        >, and
-                        <span class="text-orange-400 font-semibold"
-                            >SvelteKit</span
-                        >.
-                    </p>
-                </div>
-
-                <div
-                    class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-lg relative group overflow-hidden"
-                >
-                    <div
-                        class="absolute top-0 left-0 w-1 h-full bg-spider-blue"
-                    ></div>
-                    <p class="text-lg leading-relaxed text-gray-300">
-                        Proven track record in architecting scalable admin
-                        panels, engineering resilient API infrastructures, and
-                        optimizing frontend performance. Adept at bridging the
-                        gap between design and technology to deliver premium
-                        UI/UX experiences using <span
-                            class="text-cyan-400 font-semibold"
-                            >Tailwind CSS</span
-                        >,
-                        <span class="text-blue-400 font-semibold"
-                            >Ant Design</span
-                        >, and
-                        <span class="text-white font-semibold">Three.js</span>.
-                    </p>
-                </div>
-
-                <!-- Current Role Badge -->
-                <div
-                    class="inline-flex items-center gap-4 bg-gradient-to-r from-spider-red/10 to-spider-blue/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all w-full"
-                >
-                    <div
-                        class="w-12 h-12 rounded-full bg-gradient-to-br from-spider-red to-spider-blue flex items-center justify-center text-2xl shadow-lg"
+                        class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-lg relative group overflow-hidden"
                     >
-                        🏢
-                    </div>
-                    <div>
-                        <h3 class="font-comic text-xl text-white mb-1">
-                            Current Role
-                        </h3>
-                        <p class="text-gray-300">
-                            <strong>Web Developer</strong> at Spatium Offices
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-spider-red"
+                        ></div>
+                        <p class="text-lg leading-relaxed text-gray-300">
+                            Innovative and high-performance <span
+                                class="text-white font-bold">Web Developer</span
+                            >
+                            with over
+                            <span class="text-spider-red font-bold">4 years</span>
+                            of experience building dynamic web applications. Expert
+                            in modern JavaScript frameworks including
+                            <span class="text-spider-blue font-semibold"
+                                >React.js</span
+                            >,
+                            <span class="text-green-400 font-semibold">Vue.js</span
+                            >,
+                            <span class="text-green-500 font-semibold">Nuxt.js</span
+                            >, and
+                            <span class="text-orange-400 font-semibold"
+                                >SvelteKit</span
+                            >.
                         </p>
-                        <p class="text-sm text-gray-500">Nov 2025 - Present</p>
+                    </div>
+
+                    <div
+                        class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-lg relative group overflow-hidden"
+                    >
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-spider-blue"
+                        ></div>
+                        <p class="text-lg leading-relaxed text-gray-300">
+                            Proven track record in architecting scalable admin
+                            panels, engineering resilient API infrastructures, and
+                            optimizing frontend performance. Adept at bridging the
+                            gap between design and technology to deliver premium
+                            UI/UX experiences using <span
+                                class="text-cyan-400 font-semibold"
+                                >Tailtail</span
+                            >,
+                            <span class="text-blue-400 font-semibold"
+                                >Ant Design</span
+                            >, and
+                            <span class="text-white font-semibold">Three.js</span>.
+                        </p>
+                    </div>
+
+                    <!-- Current Role Badge -->
+                    <div
+                        class="inline-flex items-center gap-4 bg-gradient-to-r from-spider-red/10 to-spider-blue/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all w-full"
+                    >
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-spider-red to-spider-blue flex items-center justify-center text-2xl shadow-lg"
+                        >
+                            🏢
+                        </div>
+                        <div>
+                            <h3 class="font-comic text-xl text-white mb-1">
+                                Current Role
+                            </h3>
+                            <p class="text-gray-300">
+                                <strong>Web Developer</strong> at Spatium Offices
+                            </p>
+                            <p class="text-sm text-gray-500">Nov 2025 - Present</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </ParallaxLayer>
 
             <!-- Skills Grid with Spider Web -->
-            <div class="relative">
-                {#if inView}
-                    <!-- Spider Web Skill Network -->
-                    <div class="mb-8 bg-black/20 rounded-2xl border border-white/5 p-4">
-                        <SkillWeb />
-                    </div>
-                    
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        {#each skillCategories as category, i}
-                            <div
-                                in:fly={{
-                                    y: 30,
-                                    delay: i * 150,
-                                    duration: 600,
-                                }}
-                                class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-spider-blue/50 transition-all duration-300 hover:bg-white/10 group"
-                                style="transform: perspective(1000px);"
-                            >
-                                <div class="flex items-center gap-3 mb-4">
-                                    <span
-                                        class="text-2xl group-hover:scale-110 transition-transform duration-300"
-                                        >{category.icon}</span
-                                    >
-                                    <h3 class="font-bold text-white text-lg">
-                                        {category.title}
-                                    </h3>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2">
-                                    {#each category.skills as skill}
+            <ParallaxLayer speed={0.6}>
+                <div class="relative">
+                    {#if inView}
+                        <!-- Spider Web Skill Network -->
+                        <div class="mb-8 bg-black/20 rounded-2xl border border-white/5 p-4">
+                            <SkillWeb />
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            {#each skillCategories as category, i}
+                                <div
+                                    in:fly={{
+                                        y: 30,
+                                        delay: i * 150,
+                                        duration: 600,
+                                    }}
+                                    class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-spider-blue/50 transition-all duration-300 hover:bg-white/10 group"
+                                >
+                                    <div class="flex items-center gap-3 mb-4">
                                         <span
-                                            class="px-3 py-1 bg-black/30 rounded-lg text-sm text-gray-300 border border-white/5 hover:border-spider-red/50 hover:text-white hover:bg-spider-red/10 transition-all duration-300"
+                                            class="text-2xl group-hover:scale-110 transition-transform duration-300"
+                                            >{category.icon}</span
                                         >
-                                            {skill}
-                                        </span>
-                                    {/each}
+                                        <h3 class="font-bold text-white text-lg">
+                                            {category.title}
+                                        </h3>
+                                    </div>
+
+                                    <div class="flex flex-wrap gap-2">
+                                        {#each category.skills as skill}
+                                            <span
+                                                class="px-3 py-1 bg-black/30 rounded-lg text-sm text-gray-300 border border-white/5 hover:border-spider-red/50 hover:text-white hover:bg-spider-red/10 transition-all duration-300"
+                                            >
+                                                {skill}
+                                            </span>
+                                        {/each}
+                                    </div>
                                 </div>
-                            </div>
-                        {/each}
-                    </div>
-                {/if}
-            </div>
+                            {/each}
+                        </div>
+                    {/if}
+                </div>
+            </ParallaxLayer>
         </div>
     </div>
 </section>

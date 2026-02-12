@@ -1,7 +1,7 @@
 <script lang="ts">
     import "../app.css";
     import SpiderCursor from "$lib/components/SpiderCursor.svelte";
-    import WebSlingEffect from "$lib/components/WebSlingEffect.svelte";
+    import ScrollProgress from "$lib/components/ScrollProgress.svelte";
     import ParticleBurst from "$lib/components/ParticleBurst.svelte";
     import { onMount } from 'svelte';
 
@@ -23,7 +23,7 @@
 </script>
 
 <SpiderCursor />
-<WebSlingEffect />
+<ScrollProgress />
 <ParticleBurst bind:this={particleBurst} />
 
 <main>

@@ -1,5 +1,6 @@
 <script>
     import ProjectCard from "./ProjectCard.svelte";
+    import ParallaxLayer from "./ParallaxLayer.svelte";
 
     const projects = [
         {
@@ -92,17 +93,19 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {#each projects as project}
-                <div class="group relative h-full">
-                    <!-- Card Glow -->
-                    <div
-                        class="absolute -inset-0.5 bg-gradient-to-r from-spider-red to-spider-blue rounded-2xl opacity-0 group-hover:opacity-30 blur transition duration-500"
-                    ></div>
+        <ParallaxLayer speed={0.4}>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {#each projects as project}
+                    <div class="group relative h-full">
+                        <!-- Card Glow -->
+                        <div
+                            class="absolute -inset-0.5 bg-gradient-to-r from-spider-red to-spider-blue rounded-2xl opacity-0 group-hover:opacity-30 blur transition duration-500"
+                        ></div>
 
-                    <ProjectCard {...project} />
-                </div>
-            {/each}
-        </div>
+                        <ProjectCard {...project} />
+                    </div>
+                {/each}
+            </div>
+        </ParallaxLayer>
     </div>
 </section>

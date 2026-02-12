@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { fly, fade } from "svelte/transition";
     import Card3D from "./Card3D.svelte";
+    import ParallaxLayer from "./ParallaxLayer.svelte";
 
     let experiences = [
         {
@@ -109,102 +110,104 @@
         </div>
 
         <!-- Timeline -->
-        <div class="relative">
-            <!-- Center Line -->
-            <div
-                class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-spider-red via-purple-500 to-spider-blue opacity-30 rounded-full"
-            ></div>
+        <ParallaxLayer speed={0.5}>
+            <div class="relative">
+                <!-- Center Line -->
+                <div
+                    class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-spider-red via-purple-500 to-spider-blue opacity-30 rounded-full"
+                ></div>
 
-            <div class="space-y-12 md:space-y-24">
-                {#if inView}
-                    {#each experiences as exp, i}
-                        <div
-                            class="relative flex flex-col md:flex-row items-center {i %
-                                2 ===
-                            0
-                                ? 'md:flex-row-reverse'
-                                : ''}"
-                        >
-                            <!-- Timeline Dot -->
+                <div class="space-y-12 md:space-y-24">
+                    {#if inView}
+                        {#each experiences as exp, i}
                             <div
-                                class="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-slate-900 border-4 border-spider-red rounded-full z-20 shadow-[0_0_15px_rgba(255,0,0,0.5)] flex items-center justify-center"
-                            >
-                                <div
-                                    class="w-2 h-2 bg-white rounded-full animate-pulse"
-                                ></div>
-                            </div>
-
-                            <!-- Content Spacer -->
-                            <div class="w-full md:w-1/2"></div>
-
-                            <!-- Content Card -->
-                            <div
-                                class="w-full md:w-1/2 pl-12 md:pl-0 {i % 2 ===
+                                class="relative flex flex-col md:flex-row items-center {i %
+                                    2 ===
                                 0
-                                    ? 'md:pr-12'
-                                    : 'md:pl-12'}"
-                                in:fly={{
-                                    x: i % 2 === 0 ? -50 : 50,
-                                    y: 0,
-                                    duration: 800,
-                                    delay: i * 200,
-                                }}
+                                    ? 'md:flex-row-reverse'
+                                    : ''}"
                             >
-                                <Card3D>
+                                <!-- Timeline Dot -->
+                                <div
+                                    class="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-slate-900 border-4 border-spider-red rounded-full z-20 shadow-[0_0_15px_rgba(255,0,0,0.5)] flex items-center justify-center"
+                                >
                                     <div
-                                        class="flex flex-wrap justify-between items-start mb-4 gap-2"
-                                    >
-                                        <div>
-                                            <h3
-                                                class="text-2xl font-bold text-white group-hover:text-spider-blue transition-colors"
-                                            >
-                                                {exp.company}
-                                            </h3>
-                                            <div
-                                                class="text-spider-red font-comic-neue font-bold text-lg"
-                                            >
-                                                {exp.role}
-                                            </div>
-                                        </div>
-                                        <div class="text-right">
-                                            <div
-                                                class="text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/5"
-                                            >
-                                                {exp.period}
-                                            </div>
-                                            <div
-                                                class="text-xs text-gray-500 mt-1"
-                                            >
-                                                {exp.location}
-                                            </div>
-                                        </div>
-                                    </div>
+                                        class="w-2 h-2 bg-white rounded-full animate-pulse"
+                                    ></div>
+                                </div>
 
-                                    <p
-                                        class="text-gray-300 mb-4 italic border-l-2 border-spider-red/30 pl-3"
-                                    >
-                                        {exp.description}
-                                    </p>
+                                <!-- Content Spacer -->
+                                <div class="w-full md:w-1/2"></div>
 
-                                    <ul class="space-y-2">
-                                        {#each exp.achievements as achievement}
-                                            <li
-                                                class="flex items-start gap-2 text-gray-400 text-sm"
-                                            >
-                                                <span
-                                                    class="text-spider-blue mt-1"
-                                                    >🕷️</span
+                                <!-- Content Card -->
+                                <div
+                                    class="w-full md:w-1/2 pl-12 md:pl-0 {i % 2 ===
+                                    0
+                                        ? 'md:pr-12'
+                                        : 'md:pl-12'}"
+                                    in:fly={{
+                                        x: i % 2 === 0 ? -50 : 50,
+                                        y: 0,
+                                        duration: 800,
+                                        delay: i * 200,
+                                    }}
+                                >
+                                    <Card3D>
+                                        <div
+                                            class="flex flex-wrap justify-between items-start mb-4 gap-2"
+                                        >
+                                            <div>
+                                                <h3
+                                                    class="text-2xl font-bold text-white group-hover:text-spider-blue transition-colors"
                                                 >
-                                                <span>{achievement}</span>
-                                            </li>
-                                        {/each}
-                                    </ul>
-                                </Card3D>
+                                                    {exp.company}
+                                                </h3>
+                                                <div
+                                                    class="text-spider-red font-comic-neue font-bold text-lg"
+                                                >
+                                                    {exp.role}
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <div
+                                                    class="text-sm text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/5"
+                                                >
+                                                    {exp.period}
+                                                </div>
+                                                <div
+                                                    class="text-xs text-gray-500 mt-1"
+                                                >
+                                                    {exp.location}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p
+                                            class="text-gray-300 mb-4 italic border-l-2 border-spider-red/30 pl-3"
+                                        >
+                                            {exp.description}
+                                        </p>
+
+                                        <ul class="space-y-2">
+                                            {#each exp.achievements as achievement}
+                                                <li
+                                                    class="flex items-start gap-2 text-gray-400 text-sm"
+                                                >
+                                                    <span
+                                                        class="text-spider-blue mt-1"
+                                                        >🕷️</span
+                                                    >
+                                                    <span>{achievement}</span>
+                                                </li>
+                                            {/each}
+                                        </ul>
+                                    </Card3D>
+                                </div>
                             </div>
-                        </div>
-                    {/each}
-                {/if}
+                        {/each}
+                    {/if}
+                </div>
             </div>
-        </div>
+        </ParallaxLayer>
     </div>
 </section>
