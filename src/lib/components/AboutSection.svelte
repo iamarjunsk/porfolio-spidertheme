@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { fly, fade } from "svelte/transition";
+    import SkillWeb from "./SkillWeb.svelte";
 
     let skillCategories = [
         {
@@ -174,9 +175,14 @@
                 </div>
             </div>
 
-            <!-- Skills Grid -->
+            <!-- Skills Grid with Spider Web -->
             <div class="relative">
                 {#if inView}
+                    <!-- Spider Web Skill Network -->
+                    <div class="mb-8 bg-black/20 rounded-2xl border border-white/5 p-4">
+                        <SkillWeb />
+                    </div>
+                    
                     <div class="grid sm:grid-cols-2 gap-6">
                         {#each skillCategories as category, i}
                             <div
@@ -186,6 +192,7 @@
                                     duration: 600,
                                 }}
                                 class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-spider-blue/50 transition-all duration-300 hover:bg-white/10 group"
+                                style="transform: perspective(1000px);"
                             >
                                 <div class="flex items-center gap-3 mb-4">
                                     <span
@@ -200,7 +207,7 @@
                                 <div class="flex flex-wrap gap-2">
                                     {#each category.skills as skill}
                                         <span
-                                            class="px-3 py-1 bg-black/30 rounded-lg text-sm text-gray-300 border border-white/5 hover:border-spider-red/50 hover:text-white transition-colors cursor-default"
+                                            class="px-3 py-1 bg-black/30 rounded-lg text-sm text-gray-300 border border-white/5 hover:border-spider-red/50 hover:text-white hover:bg-spider-red/10 transition-all duration-300"
                                         >
                                             {skill}
                                         </span>

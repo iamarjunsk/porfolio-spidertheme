@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { fly, fade } from "svelte/transition";
+    import Card3D from "./Card3D.svelte";
 
     let experiences = [
         {
@@ -142,21 +143,14 @@
                                 0
                                     ? 'md:pr-12'
                                     : 'md:pl-12'}"
+                                in:fly={{
+                                    x: i % 2 === 0 ? -50 : 50,
+                                    y: 0,
+                                    duration: 800,
+                                    delay: i * 200,
+                                }}
                             >
-                                <div
-                                    in:fly={{
-                                        x: i % 2 === 0 ? -50 : 50,
-                                        y: 0,
-                                        duration: 800,
-                                        delay: i * 200,
-                                    }}
-                                    class="group relative bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl overflow-hidden hover:border-spider-blue/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]"
-                                >
-                                    <!-- Glitch Hover Effect -->
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"
-                                    ></div>
-
+                                <Card3D>
                                     <div
                                         class="flex flex-wrap justify-between items-start mb-4 gap-2"
                                     >
@@ -205,7 +199,7 @@
                                             </li>
                                         {/each}
                                     </ul>
-                                </div>
+                                </Card3D>
                             </div>
                         </div>
                     {/each}
