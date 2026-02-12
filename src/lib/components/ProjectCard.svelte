@@ -8,6 +8,7 @@
 
     import { ExternalLink, Github } from "lucide-svelte";
     import tilt from "$lib/actions/tilt";
+    import SpiderSense from "./SpiderSense.svelte";
 </script>
 
 <article
@@ -17,6 +18,7 @@
                 shadow-lg hover:shadow-xl hover:shadow-spider-red/10
                 h-full flex flex-col"
 >
+    <SpiderSense intensity="low" trigger="hover" />
     <!-- Web Pattern Overlay -->
     <div
         class="absolute -top-1/2 -right-1/2 w-full h-full

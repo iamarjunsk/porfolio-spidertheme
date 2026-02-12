@@ -4,6 +4,7 @@
     import ExperienceSection from "$lib/components/ExperienceSection.svelte";
     import ProjectsSection from "$lib/components/ProjectsSection.svelte";
     import ContactSection from "$lib/components/ContactSection.svelte";
+    import WebCorner from "$lib/components/WebCorner.svelte";
 </script>
 
 <svelte:head>
@@ -22,9 +23,22 @@
 </svelte:head>
 
 <HeroSection />
-<AboutSection />
-<ExperienceSection />
-<ProjectsSection />
+
+<div class="relative">
+    <WebCorner position="bottom-right" size={200} animated={true} />
+    <AboutSection />
+</div>
+
+<div class="relative">
+    <WebCorner position="top-left" size={180} animated={true} />
+    <ExperienceSection />
+</div>
+
+<div class="relative">
+    <WebCorner position="bottom-left" size={220} animated={true} />
+    <ProjectsSection />
+</div>
+
 <ContactSection />
 
 <!-- Footer -->

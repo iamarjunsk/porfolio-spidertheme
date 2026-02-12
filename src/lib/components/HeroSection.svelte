@@ -2,6 +2,10 @@
     import { onMount } from "svelte";
     import { fade, scale } from "svelte/transition";
     import ThreeBackground from "./ThreeBackground.svelte";
+    import WebCorner from "./WebCorner.svelte";
+    import SpiderSense from "./SpiderSense.svelte";
+    import Text3D from "./Text3D.svelte";
+    import Spider3D from "./Spider3D.svelte";
 
     let visible = false;
     let experienceText = "";
@@ -46,6 +50,11 @@
 </script>
 
 <header class="relative min-h-screen bg-[#0a0a0a] overflow-hidden">
+    <!-- Animated Web Corners -->
+    <WebCorner position="top-left" size={180} animated={true} />
+    <WebCorner position="top-right" size={150} animated={true} />
+    <WebCorner position="bottom-left" size={120} animated={true} />
+    
     <!-- Three.js Background -->
     <ThreeBackground />
 
@@ -99,31 +108,12 @@
                             <div
                                 class="flex flex-col items-center lg:flex-row lg:items-center gap-4 mb-4 lg:mb-6"
                             >
-                                <div class="relative group">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-r from-spider-red to-spider-blue rounded-full blur opacity-50 group-hover:opacity-100 transition duration-500"
-                                    ></div>
-                                    <img
-                                        src="/spider-logo.png"
-                                        alt="Spider Logo"
-                                        class="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 drop-shadow-2xl transform group-hover:rotate-12 transition duration-500"
-                                    />
-                                </div>
+                                <Spider3D />
                                 <div>
                                     <h1
-                                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-comic text-white leading-tight tracking-tight relative"
+                                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-comic text-white leading-tight tracking-tight"
                                     >
-                                        <span class="relative z-10"
-                                            >Arjun S K</span
-                                        >
-                                        <span
-                                            class="absolute top-1 left-1 text-spider-red opacity-50 blur-[1px] z-0"
-                                            >Arjun S K</span
-                                        >
-                                        <span
-                                            class="absolute -bottom-1 -right-1 text-spider-blue opacity-50 blur-[1px] z-0"
-                                            >Arjun S K</span
-                                        >
+                                        <Text3D text="Arjun S K" className="drop-shadow-2xl" />
                                     </h1>
                                     <div
                                         class="text-lg sm:text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-spider-red to-spider-blue font-comic-neue mt-2 lg:mt-3 font-bold"
@@ -166,6 +156,7 @@
                                         })}
                                 class="group relative px-8 py-4 bg-transparent overflow-hidden rounded-lg"
                             >
+                                <SpiderSense intensity="medium" trigger="hover" />
                                 <div
                                     class="absolute inset-0 w-full h-full bg-spider-red/80 group-hover:bg-spider-red transition-all duration-300 transform skew-x-12 group-hover:skew-x-0"
                                 ></div>
@@ -185,6 +176,7 @@
                                         })}
                                 class="group relative px-8 py-4 bg-transparent overflow-hidden rounded-lg border border-spider-blue/50 hover:border-spider-blue"
                             >
+                                <SpiderSense intensity="medium" trigger="hover" />
                                 <div
                                     class="absolute inset-0 w-full h-full bg-spider-blue/10 group-hover:bg-spider-blue/20 transition-all duration-300"
                                 ></div>
@@ -200,6 +192,7 @@
                                 download="Arjun_SK_Resume.pdf"
                                 class="group relative px-8 py-4 bg-transparent overflow-hidden rounded-lg border border-purple-500/50 hover:border-purple-500 animate-bounce-slow"
                             >
+                                <SpiderSense intensity="low" trigger="hover" />
                                 <div
                                     class="absolute inset-0 w-full h-full bg-purple-500/10 group-hover:bg-purple-500/20 transition-all duration-300"
                                 ></div>
@@ -244,6 +237,7 @@
                         }}
                         class="bg-black/40 backdrop-blur-xl rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10 shadow-2xl order-2 lg:order-2 relative overflow-hidden group"
                     >
+                        <SpiderSense intensity="low" trigger="hover" />
                         <!-- Card Glow -->
                         <div
                             class="absolute -top-20 -right-20 w-60 h-60 bg-spider-blue/20 rounded-full blur-3xl group-hover:bg-spider-blue/30 transition-all duration-500"
