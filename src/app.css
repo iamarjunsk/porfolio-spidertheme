@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --scrollbar-thumb: linear-gradient(to bottom, #FF0000, #0000FF);
+    --scrollbar-track: #0f172a;
+    --scrollbar-thumb-hover: linear-gradient(to bottom, #dc2626, #2563eb);
+}
+
+[data-theme="precision"] {
+    --scrollbar-thumb: #6366F1;
+    --scrollbar-track: #1a1a1a;
+    --scrollbar-thumb-hover: #818cf8;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -14,17 +26,19 @@
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-slate-900 rounded-full;
+    background: var(--scrollbar-track);
+    border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-gradient-to-b from-spider-red to-spider-blue rounded-full;
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
     border: 2px solid transparent;
     background-clip: padding-box;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply from-red-600 to-blue-600;
+    background: var(--scrollbar-thumb-hover);
   }
 }
 

@@ -10,10 +10,16 @@
     let particleBurst: ParticleBurst;
     let currentTheme = $state<'spider' | 'precision'>('precision');
     
-    theme.subscribe(value => currentTheme = value);
+    theme.subscribe(value => {
+        currentTheme = value;
+        if (typeof document !== 'undefined') {
+            document.documentElement.setAttribute('data-theme', value);
+        }
+    });
     
     onMount(() => {
-        document.body.style.cursor = 'auto';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        document.body.style.cursor = currentTheme === 'spider' ? 'none' : 'auto';
         
         const handleClick = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
