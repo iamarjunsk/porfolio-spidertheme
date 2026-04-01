@@ -8,6 +8,14 @@
 
     const projects = [
         {
+            title: "USC Race & Equity Center",
+            description: "Research-driven platform for USC advancing racial equity through data, policy analysis, and campus climate assessments across 1.4M+ students.",
+            image: "/usc-race-project.png",
+            liveUrl: "https://race.usc.edu",
+            githubUrl: "#",
+            tags: ["Angular", "SCSS", "TypeScript"],
+        },
+        {
             title: "Luxora Shop",
             description: "A modern e-commerce application focusing on seamless user experience. Features premium UI, cart management, and smooth checkout flow.",
             image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop",
