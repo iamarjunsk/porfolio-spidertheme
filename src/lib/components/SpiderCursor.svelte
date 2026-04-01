@@ -49,13 +49,5 @@
 {/if}
 
 <style>
-  :global(body) {
-    cursor: none;
-  }
-  
-  @media (max-width: 768px) {
-    :global(body) {
-      cursor: auto;
-    }
-  }
+  /* Cursor is now controlled by layout based on theme */
 </style>
