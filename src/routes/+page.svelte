@@ -6,6 +6,7 @@
     import AboutSection from "$lib/components/AboutSection.svelte";
     import ExperienceSection from "$lib/components/ExperienceSection.svelte";
     import ProjectsSection from "$lib/components/ProjectsSection.svelte";
+    import GithubSection from "$lib/components/GithubSection.svelte";
     import ContactSection from "$lib/components/ContactSection.svelte";
     import WebCorner from "$lib/components/WebCorner.svelte";
 
@@ -13,6 +14,7 @@
     import PrecisionAbout from "$lib/components/precision/PrecisionAbout.svelte";
     import PrecisionExperience from "$lib/components/precision/PrecisionExperience.svelte";
     import PrecisionProjects from "$lib/components/precision/PrecisionProjects.svelte";
+    import PrecisionGithub from "$lib/components/precision/PrecisionGithub.svelte";
     import PrecisionContact from "$lib/components/precision/PrecisionContact.svelte";
     import PrecisionFooter from "$lib/components/precision/PrecisionFooter.svelte";
 </script>
@@ -52,6 +54,10 @@
         <ProjectsSection />
     </div>
 
+    <div class="relative z-10">
+        <GithubSection />
+    </div>
+
     <ContactSection />
 
     <footer
@@ -82,6 +88,7 @@
     <PrecisionAbout />
     <PrecisionExperience />
     <PrecisionProjects />
+    <PrecisionGithub />
     <PrecisionContact />
     <PrecisionFooter />
 {/if}

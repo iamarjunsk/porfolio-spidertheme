@@ -8,14 +8,6 @@
 
     const projects = [
         {
-            title: "GitHub Profile",
-            description: "My personal GitHub profile showcasing open-source contributions, repositories, and a dynamic README with automated statistics.",
-            image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop",
-            liveUrl: "https://github.com/iamarjunsk",
-            githubUrl: "https://github.com/iamarjunsk",
-            tags: ["GitHub", "Open Source", "Markdown"],
-        },
-        {
             title: "USC Race & Equity Center",
             description: "Research-driven platform for USC advancing racial equity through data, policy analysis, and campus climate assessments across 1.4M+ students.",
             image: "/usc-race-project.png",
@@ -28,7 +20,7 @@
             description: "A modern e-commerce application focusing on seamless user experience. Features premium UI, cart management, and smooth checkout flow.",
             image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop",
             liveUrl: "https://luxora-shop.vercel.app",
-            githubUrl: "#",
+            githubUrl: "https://github.com/iamarjunsk/luxora-ecommerce",
             tags: ["Nuxt.js", "Pinia", "Tailwind CSS", "Razorpay"],
         },
         {
@@ -36,7 +28,7 @@
             description: "A collaborative Kanban project management tool similar to Trello/Jira. Supports drag-and-drop tasks and real-time updates.",
             image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1000&auto=format&fit=crop",
             liveUrl: "https://kbn-board.netlify.app",
-            githubUrl: "#",
+            githubUrl: "https://github.com/iamarjunsk/kbn-board",
             tags: ["Vue.js", "Pinia", "Drag & Drop", "Netlify"],
         },
         {
@@ -60,7 +52,7 @@
             description: "Scalable SPA for facility management with resilient API infrastructure and high-performance QR scanner.",
             image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
             liveUrl: "#",
-            githubUrl: "#",
+            githubUrl: "https://github.com/iamarjunsk/spatium-facility-management",
             tags: ["React.js", "Redux Toolkit", "Axios", "Vite"],
         },
         {
