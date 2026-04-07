@@ -4,6 +4,15 @@
 
     const projects = [
         {
+            title: "GitHub Profile",
+            description:
+                "My personal GitHub profile showcasing open-source contributions, repositories, and a dynamic README with automated statistics.",
+            image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop",
+            liveUrl: "https://github.com/iamarjunsk",
+            githubUrl: "https://github.com/iamarjunsk",
+            tags: ["GitHub", "Open Source", "Markdown"],
+        },
+        {
             title: "USC Race & Equity Center",
             description:
                 "Research-driven platform for the University of Southern California advancing racial equity through data, policy analysis, and campus climate assessments across 1.4M+ students.",
