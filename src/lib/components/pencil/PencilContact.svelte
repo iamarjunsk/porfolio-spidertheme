@@ -54,29 +54,29 @@
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-graphite-700 to-transparent"></div>
   <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-graphite-700 to-transparent"></div>
 
-  <div class="max-w-4xl mx-auto px-6 relative z-10">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
     {#if mounted}
-      <div in:fly="{{ y: 30, duration: 600 }}" class="text-center mb-12">
-        <h2 class="font-display text-5xl md:text-6xl text-paper mb-2">Get in Touch</h2>
+      <div in:fly="{{ y: 30, duration: 600 }}" class="text-center mb-8 sm:mb-12">
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl text-paper mb-2">Get in Touch</h2>
         <div class="w-24 h-1 bg-paper mx-auto"></div>
       </div>
 
-      <div in:fade="{{ duration: 600, delay: 300 }}" class="text-center mb-12">
-        <p class="font-handwriting text-xl text-graphite-400">
+      <div in:fade="{{ duration: 600, delay: 300 }}" class="text-center mb-8 sm:mb-12 px-2">
+        <p class="font-handwriting text-lg sm:text-xl text-graphite-400">
           Have a project in mind? Let's create something amazing together.
         </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-6 mb-12">
+      <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
         {#each contactLinks as link, i}
           <a
             href={link.href}
             target={link.isExternal ? '_blank' : undefined}
             rel={link.isExternal ? 'noopener noreferrer' : undefined}
-            class="group flex items-center gap-4 p-6 bg-graphite-800 rounded-xl hover:bg-graphite-700 transition-all duration-300"
+            class="group flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-graphite-800 rounded-xl hover:bg-graphite-700 transition-all duration-300"
             in:fly="{{ y: 20, duration: 400, delay: 400 + (i * 100) }}"
           >
-            <div class="w-12 h-12 flex items-center justify-center bg-graphite-900 rounded-lg group-hover:bg-graphite-600 transition-colors">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-graphite-900 rounded-lg group-hover:bg-graphite-600 transition-colors shrink-0">
               {#if link.isBrand}
                 <svg class="w-6 h-6 text-paper" fill="currentColor" viewBox="0 0 24 24">
                   {@html link.icon}
@@ -89,7 +89,7 @@
             </div>
             <div>
               <p class="text-sm text-graphite-500 font-handwriting">{link.label}</p>
-              <p class="text-paper font-medium">{link.value}</p>
+              <p class="text-paper font-medium text-sm sm:text-base">{link.value}</p>
             </div>
           </a>
         {/each}

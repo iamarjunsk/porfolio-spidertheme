@@ -46,7 +46,7 @@
             </svg>
         </div>
 
-        <div class="absolute top-8 left-8 w-32 h-32 opacity-20">
+        <div class="absolute top-4 left-4 sm:top-8 sm:left-8 w-20 h-20 sm:w-32 sm:h-32 opacity-20">
             <svg viewBox="0 0 100 100" class="w-full h-full">
                 <path
                     d="M10,30 Q50,10 90,30 Q70,50 90,70 Q50,90 10,70 Q30,50 10,30"
@@ -58,7 +58,7 @@
             </svg>
         </div>
 
-        <div class="absolute bottom-16 right-16 w-24 h-24 opacity-15 rotate-12">
+        <div class="absolute bottom-8 right-8 sm:bottom-16 sm:right-16 w-16 h-16 sm:w-24 sm:h-24 opacity-15 rotate-12">
             <svg viewBox="0 0 100 100" class="w-full h-full">
                 <circle
                     cx="50"
@@ -80,14 +80,14 @@
         </div>
     {/if}
 
-    <div class="max-w-4xl mx-auto px-6 py-20 relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-20 relative z-10">
         {#if visible}
             <div
                 in:fly={{ y: 40, duration: 800, delay: 200 }}
                 class="text-center"
             >
                 <div
-                    class="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-graphite-600 bg-graphite-100 rounded-full"
+                    class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6 text-xs sm:text-sm font-medium text-graphite-600 bg-graphite-100 rounded-full"
                 >
                     <span
                         class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
@@ -96,7 +96,7 @@
                 </div>
 
                 <h1
-                    class="font-display text-6xl md:text-8xl lg:text-9xl text-graphite-900 mb-4 tracking-tight"
+                    class="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-graphite-900 mb-3 sm:mb-4 tracking-tight"
                     style="font-family: 'Caveat', cursive;"
                 >
                     <span
@@ -112,31 +112,31 @@
                 </h1>
 
                 <p
-                    class="font-body text-xl md:text-2xl text-graphite-600 mb-4 max-w-2xl mx-auto"
+                    class="font-body text-lg sm:text-xl md:text-2xl text-graphite-600 mb-3 sm:mb-4 max-w-2xl mx-auto px-2 sm:px-0"
                     in:fade={{ duration: 600, delay: 700 }}
                 >
                     {personalInfo.title}
                 </p>
 
                 <p
-                    class="font-handwriting text-lg text-graphite-500 mb-8 max-w-xl mx-auto italic"
+                    class="font-handwriting text-base sm:text-lg text-graphite-500 mb-6 sm:mb-8 max-w-xl mx-auto italic px-4 sm:px-0"
                     in:fade={{ duration: 600, delay: 900 }}
                 >
                     "{personalInfo.tagline}"
                 </p>
 
                 <div
-                    class="flex flex-wrap justify-center gap-3 mb-12"
+                    class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12"
                     in:fly={{ y: 20, duration: 600, delay: 1100 }}
                 >
                     <div
-                        class="px-4 py-2 bg-graphite-900 text-paper text-sm font-medium rounded-lg"
+                        class="px-3 py-1.5 sm:px-4 sm:py-2 bg-graphite-900 text-paper text-xs sm:text-sm font-medium rounded-lg"
                     >
                         {personalInfo.experience_years} Years Exp
                     </div>
                     {#each heroSkills as skill, i}
                         <div
-                            class="px-4 py-2 border-2 border-graphite-300 text-graphite-700 text-sm font-medium rounded-lg hover:border-graphite-900 hover:bg-graphite-900 hover:text-paper transition-all duration-300"
+                            class="px-3 py-1.5 sm:px-4 sm:py-2 border-2 border-graphite-300 text-graphite-700 text-xs sm:text-sm font-medium rounded-lg hover:border-graphite-900 hover:bg-graphite-900 hover:text-paper transition-all duration-300"
                             in:fly={{
                                 y: 10,
                                 duration: 400,
@@ -149,13 +149,13 @@
                 </div>
 
                 <div
-                    class="flex flex-wrap justify-center gap-3"
+                    class="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3"
                     in:fly={{ y: 20, duration: 600, delay: 1600 }}
                 >
                     <a
                         href="/Arjun S K Resume.pdf"
                         download="Arjun_S_K_Resume.pdf"
-                        class="group flex items-center gap-2 px-5 py-3 bg-graphite-900 text-paper text-sm font-medium rounded-lg hover:bg-graphite-700 transition-all duration-300"
+                        class="group flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 bg-graphite-900 text-paper text-sm font-medium rounded-lg hover:bg-graphite-700 transition-all duration-300"
                     >
                         <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -164,7 +164,7 @@
                     </a>
                     <a
                         href="#projects"
-                        class="group flex items-center gap-2 px-6 py-3 bg-graphite-900 text-paper font-medium rounded-lg hover:bg-graphite-700 transition-all duration-300"
+                        class="group flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 bg-graphite-900 text-paper font-medium rounded-lg hover:bg-graphite-700 transition-all duration-300"
                     >
                         View Work
                         <svg
@@ -183,7 +183,7 @@
                     </a>
                     <a
                         href="#contact"
-                        class="flex items-center gap-2 px-6 py-3 border-2 border-graphite-900 text-graphite-900 font-medium rounded-lg hover:bg-graphite-900 hover:text-paper transition-all duration-300"
+                        class="flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 border-2 border-graphite-900 text-graphite-900 font-medium rounded-lg hover:bg-graphite-900 hover:text-paper transition-all duration-300"
                     >
                         Get in Touch
                     </a>

@@ -34,40 +34,40 @@
     </svg>
   </div>
 
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
     {#if mounted}
-      <div in:fly="{{ y: 30, duration: 600 }}" class="mb-16">
-        <h2 class="font-display text-5xl md:text-6xl text-graphite-900 mb-2">About Me</h2>
+      <div in:fly="{{ y: 30, duration: 600 }}" class="mb-10 sm:mb-16">
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl text-graphite-900 mb-2">About Me</h2>
         <div class="w-24 h-1 bg-graphite-900"></div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-start">
         <div in:fly="{{ y: 30, duration: 600, delay: 200 }}">
-          <div class="p-6 bg-white rounded-xl shadow-sm border-2 border-graphite-200 mb-8">
-            <p class="font-handwriting text-xl text-graphite-700 leading-relaxed">
+          <div class="p-4 sm:p-6 bg-white rounded-xl shadow-sm border-2 border-graphite-200 mb-6 sm:mb-8">
+            <p class="font-handwriting text-base sm:text-xl text-graphite-700 leading-relaxed">
               {professionalSummary}
             </p>
           </div>
 
-          <div class="flex gap-6">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
             {#each [
               { label: 'Years Exp', value: metrics.experience },
               { label: 'Projects', value: metrics.projects_completed },
               { label: 'Uptime', value: metrics.uptime_delivered }
             ] as metric, i}
               <div
-                class="flex-1 p-4 bg-graphite-100 rounded-lg text-center"
+                class="flex-1 p-3 sm:p-4 bg-graphite-100 rounded-lg text-center"
                 in:fly="{{ y: 20, duration: 400, delay: 400 + (i * 100) }}"
               >
-                <div class="font-display text-3xl text-graphite-900">{metric.value}</div>
-                <div class="text-sm text-graphite-500 font-handwriting">{metric.label}</div>
+                <div class="font-display text-2xl sm:text-3xl text-graphite-900">{metric.value}</div>
+                <div class="text-xs sm:text-sm text-graphite-500 font-handwriting">{metric.label}</div>
               </div>
             {/each}
           </div>
         </div>
 
         <div in:fly="{{ y: 30, duration: 600, delay: 300 }}" class="space-y-4">
-          <h3 class="font-display text-2xl text-graphite-700 mb-4">Tools of the Trade</h3>
+          <h3 class="font-display text-xl sm:text-2xl text-graphite-700 mb-3 sm:mb-4">Tools of the Trade</h3>
 
           <div class="space-y-3">
             {#each skillBars as bar}

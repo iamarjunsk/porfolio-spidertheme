@@ -18,17 +18,17 @@
     </svg>
   </div>
 
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
     {#if mounted}
-      <div in:fly="{{ y: 30, duration: 600 }}" class="mb-16">
-        <h2 class="font-display text-5xl md:text-6xl text-graphite-900 mb-2">Projects</h2>
+      <div in:fly="{{ y: 30, duration: 600 }}" class="mb-10 sm:mb-16">
+        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl text-graphite-900 mb-2">Projects</h2>
         <div class="w-24 h-1 bg-graphite-900"></div>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {#each projects as project, index}
           <article
-            class="group relative p-6 bg-white rounded-xl border-2 border-graphite-200 hover:border-graphite-900 transition-all duration-300 hover:shadow-lg"
+            class="group relative p-4 sm:p-6 bg-white rounded-xl border-2 border-graphite-200 hover:border-graphite-900 transition-all duration-300 hover:shadow-lg"
             in:fly="{{ y: 30, duration: 500, delay: 200 + (index * 100) }}"
           >
             <div class="absolute top-4 right-4 w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -43,11 +43,11 @@
               </span>
             {/if}
 
-            <h3 class="font-display text-2xl text-graphite-900 mb-2 group-hover:text-graphite-700 transition-colors">
+            <h3 class="font-display text-xl sm:text-2xl text-graphite-900 mb-2 group-hover:text-graphite-700 transition-colors">
               {project.title}
             </h3>
 
-            <p class="font-handwriting text-sm text-graphite-600 mb-4 line-clamp-2">
+            <p class="font-handwriting text-xs sm:text-sm text-graphite-600 mb-4 line-clamp-2">
               {project.description}
             </p>
 

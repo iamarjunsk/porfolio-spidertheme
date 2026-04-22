@@ -9,10 +9,10 @@
   });
 </script>
 
-<footer class="py-12 bg-paper-alt border-t border-graphite-200">
-  <div class="max-w-6xl mx-auto px-6">
+<footer class="py-10 sm:py-12 bg-paper-alt border-t border-graphite-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
     {#if mounted}
-      <div in:fade="{{ duration: 600 }}" class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div in:fade="{{ duration: 600 }}" class="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 flex items-center justify-center bg-graphite-900 rounded-full">
             <span class="text-paper font-display text-xl">A</span>
@@ -55,14 +55,14 @@
         </div>
       </div>
       
-      <div class="mt-8 pt-8 border-t border-graphite-200 text-center relative">
-        <p class="font-handwriting text-sm text-graphite-500">
+      <div class="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-graphite-200 text-center relative">
+        <p class="font-handwriting text-xs sm:text-sm text-graphite-500">
           &copy; 2026 Arjun S K. Crafted with care and curiosity.
         </p>
 
         <!-- Tiny hidden Spider-Man doodle -->
-        <div class="absolute right-0 bottom-0 opacity-[0.22] rotate-[-8deg] pointer-events-none select-none">
-          <svg width="28" height="28" viewBox="0 0 100 100" fill="none" stroke="#2d2a26" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="absolute right-0 -bottom-1 sm:bottom-0 opacity-[0.22] rotate-[-8deg] pointer-events-none select-none">
+          <svg width="24" height="24" class="sm:w-7 sm:h-7" viewBox="0 0 100 100" fill="none" stroke="#2d2a26" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
             <!-- Head -->
             <ellipse cx="50" cy="48" rx="30" ry="34"/>
             <!-- Left eye -->
