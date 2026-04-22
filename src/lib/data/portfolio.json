@@ -1,0 +1,236 @@
+{
+  "personal_info": {
+    "name": "Arjun S K",
+    "title": "Frontend Engineer & UI Craftsman",
+    "tagline": "Building the web, one thoughtful interaction at a time",
+    "experience_years": "4+",
+    "status": "Available for work",
+    "location": "Bengaluru, India"
+  },
+  "contact": {
+    "email": "dev.arjunsk@gmail.com",
+    "phone": "+919020302550",
+    "portfolio": "https://iamarjunsk.vercel.app/",
+    "linkedin": "linkedin.com/in/arjunsk",
+    "github": "github.com/arjunsk"
+  },
+  "professional_summary": "I craft thoughtful web experiences that bridge design and technology. With 4+ years across the React, Vue, and Svelte ecosystems, I specialize in turning complex problems into clean, performant interfaces — from immersive 3D scenes to enterprise admin panels serving thousands of users.",
+  "skills": {
+    "frameworks": [
+      "Vue.js 3",
+      "Nuxt.js",
+      "React.js",
+      "Next.js",
+      "SvelteKit"
+    ],
+    "languages_core": [
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "design_styling": [
+      "Tailwind CSS",
+      "SCSS / SASS",
+      "Ant Design",
+      "Shadcn / Vue",
+      "Material UI"
+    ],
+    "state_logic": [
+      "Pinia",
+      "Vuex",
+      "Redux Toolkit",
+      "Context API"
+    ],
+    "special_techniques": [
+      "Three.js (3D Web)",
+      "Canvas API",
+      "WebSockets",
+      "Performance Optimization",
+      "Chart.js",
+      "JWT Auth"
+    ],
+    "tools_infrastructure": [
+      "Vite",
+      "Git / GitHub",
+      "AWS EC2",
+      "Vercel",
+      "Netlify",
+      "Firebase",
+      "Figma"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Spatium Offices Pvt Ltd",
+      "location": "Bengaluru, India",
+      "role": "Web Developer",
+      "period": "Nov 2024 - Present",
+      "description": "Integrated Workplace Management System (IWMS) & ERP.",
+      "achievements": [
+        "Leading development of a facility platform using Nuxt.js and Tailwind CSS, managing 500+ facilities across multiple cities",
+        "Architected a scalable admin SPA with React, Vite, and Redux Toolkit for enterprise data operations",
+        "Engineered a queue-based JWT token rotation layer, ensuring 99.9% session continuity",
+        "Built an in-browser QR scanner with jsQR and Canvas API for real-time mobile check-ins",
+        "Established automated CI/CD pipelines for AWS EC2 deployment"
+      ]
+    },
+    {
+      "company": "Lobb (lobb.in)",
+      "location": "Bengaluru, India",
+      "role": "Frontend Developer",
+      "period": "July 2024 – Nov 2024",
+      "description": "Logistics platform for truck booking and fleet management.",
+      "achievements": [
+        "Developed the core admin interface using Nuxt.js and SCSS with modular, reusable components",
+        "Created UI modules for complex truck-booking workflows, streamlining logistics data management"
+      ]
+    },
+    {
+      "company": "NeoAstra Technologies Pvt Ltd",
+      "location": "Bengaluru, India",
+      "role": "Web Developer",
+      "period": "Jan 2022 – July 2024",
+      "description": "Dynamic web applications, 3D advertising, and OTT platforms.",
+      "achievements": [
+        "Apex 3D Ad Platform: Built an immersive 3D ad experience with Vue.js, Tailwind, and Three.js",
+        "Cut page load times by 3 seconds through code splitting and aggressive asset optimization",
+        "NeoVision OTT: Engineered a custom video player with AI scene detection and frame-by-frame rendering",
+        "Delivered 15+ production web apps using React, Vue, and Next.js, serving 10,000+ active users",
+        "Increased mobile engagement by 45% through responsive interface redesigns"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Visitor Management System",
+      "description": "Enterprise SaaS handling 1,000+ daily visitors across 500+ facilities. Multi-tenant RBAC, real-time tracking, and digital pass generation.",
+      "tech_stack": ["React.js", "Redux Toolkit", "Axios", "Vite", "Ant Design"],
+      "live_url": null,
+      "featured": true,
+      "category": "Enterprise"
+    },
+    {
+      "title": "VerboEdu",
+      "description": "AI-integrated individual learning platform for K-12 academic tuition, online schooling, AI & robotics, and other educational courses.",
+      "tech_stack": ["Vue.js", "Tailwind CSS"],
+      "live_url": "https://www.verboedu.com",
+      "featured": true,
+      "category": "EdTech"
+    },
+    {
+      "title": "Apex 3D Advertisement",
+      "description": "Immersive 3D ad platform with interactive models, real-time sponsor management, and live video previews.",
+      "tech_stack": ["Vue.js", "Three.js", "Tailwind CSS", "Pinia"],
+      "live_url": null,
+      "featured": true,
+      "category": "3D / Creative"
+    },
+    {
+      "title": "Luxora Shop",
+      "description": "Modern e-commerce with premium UI, cart management, Razorpay checkout, and PostgreSQL backend.",
+      "tech_stack": ["Nuxt.js", "Pinia", "Tailwind CSS", "PostgreSQL", "Razorpay"],
+      "live_url": "https://luxora-shop.vercel.app",
+      "featured": false,
+      "category": "E-Commerce"
+    },
+    {
+      "title": "NeoVision OTT",
+      "description": "Advanced streaming platform with a custom video player, AI-powered scene detection, and object recognition.",
+      "tech_stack": ["Vanilla JS", "Tailwind CSS", "Video APIs", "AI/ML"],
+      "live_url": null,
+      "featured": false,
+      "category": "Streaming"
+    },
+    {
+      "title": "KBN Board",
+      "description": "Collaborative Kanban board with drag-and-drop, offline-first persistence, and real-time sync.",
+      "tech_stack": ["Vue.js", "Nuxt.js", "Tailwind CSS", "Pinia"],
+      "live_url": "https://kbn-board.netlify.app",
+      "featured": false,
+      "category": "Productivity"
+    },
+    {
+      "title": "MyGenie Admin",
+      "description": "Comprehensive admin dashboard with advanced data visualization, analytics, and role-based access.",
+      "tech_stack": ["Next.js", "Tailwind CSS", "Chart.js", "TypeScript"],
+      "live_url": null,
+      "featured": false,
+      "category": "Dashboard"
+    },
+    {
+      "title": "Notepad App",
+      "description": "Lightweight PWA note-taking app with markdown preview, local storage, and Firebase sync.",
+      "tech_stack": ["React.js", "Firebase", "PWA", "CSS3"],
+      "live_url": "https://notepad-a6f81.web.app",
+      "featured": false,
+      "category": "Productivity"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Computer Applications (BCA)",
+      "institution": "St Mary's College Arts and Science",
+      "period": "2019 - 2022"
+    }
+  ],
+  "certifications_and_achievements": [
+    "Reduced application load times by 50% average across production projects",
+    "15+ successful project deliveries with 100% on-time rate",
+    "Active open-source contributor to React and Vue.js ecosystems",
+    "Published 10+ technical articles on modern web development"
+  ],
+  "metrics": {
+    "experience": "4+ Years",
+    "projects_completed": "20+",
+    "uptime_delivered": "99.9%"
+  },
+  "portfolio_config": {
+    "seo": {
+      "title": "Arjun S K | Frontend Engineer & UI Craftsman",
+      "description": "Portfolio of Arjun S K — Frontend engineer crafting thoughtful web experiences with React, Vue, SvelteKit, and Three.js. Available for remote work.",
+      "keywords": "Arjun S K, frontend engineer, web developer, react, vue, svelte, three.js, portfolio, bangalore"
+    },
+    "design_theme": {
+      "name": "Pencil & Paper",
+      "colors": {
+        "graphite_900": "#2d2a26",
+        "graphite_700": "#4a4540",
+        "graphite_600": "#6b6560",
+        "graphite_500": "#8a8580",
+        "graphite_400": "#a5a29c",
+        "graphite_300": "#c4bfb8",
+        "graphite_200": "#d8d4ce",
+        "graphite_100": "#e8e5e0",
+        "graphite_50": "#f4f1ed",
+        "paper": "#faf8f3",
+        "paper_alt": "#f5f2eb"
+      },
+      "fonts": {
+        "display": "Caveat",
+        "body": "Architects Daughter",
+        "handwriting": "Patrick Hand"
+      }
+    },
+    "sections_order": [
+      "Hero",
+      "About",
+      "Experience",
+      "Projects",
+      "Contact",
+      "Footer"
+    ],
+    "assets": {
+      "favicon": "/favicon.svg",
+      "logo": "/spider-logo.png",
+      "resume": "/Arjun S K Resume.pdf"
+    },
+    "tech_stack": [
+      "SvelteKit",
+      "Tailwind CSS",
+      "TypeScript",
+      "Vite",
+      "Vercel"
+    ]
+  }
+}
